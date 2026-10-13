@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Humdinger avatar, tier 0. Generated — edit the generator, not by hand. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="130dp"
+    android:viewportWidth="120"
+    android:viewportHeight="130">
+    <path android:pathData="M26,70 a34,34 0 1,0 68,0 a34,34 0 1,0 -68,0 Z"
+        android:fillColor="#FFD34E"
+        android:strokeColor="#E0A300"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path android:pathData="M44.4,64 a3.6,4.6 0 1,0 7.2,0 a3.6,4.6 0 1,0 -7.2,0 Z"
+        android:fillColor="#3A2210" />
+    <path android:pathData="M68.4,64 a3.6,4.6 0 1,0 7.2,0 a3.6,4.6 0 1,0 -7.2,0 Z"
+        android:fillColor="#3A2210" />
+    <path android:pathData="M45,79 Q60,92 75,79"
+        android:strokeColor="#3A2210"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path android:pathData="M24,72 C20,18 100,18 96,72"
+        android:strokeColor="#8A8A99"
+        android:strokeWidth="7"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path android:pathData="M20,56 H22 A6,6 0 0 1 28,62 V82 A6,6 0 0 1 22,88 H20 A6,6 0 0 1 14,82 V62 A6,6 0 0 1 20,56 Z"
+        android:fillColor="#8A8A99" />
+    <path android:pathData="M26,60 H26 A4,4 0 0 1 30,64 V80 A4,4 0 0 1 26,84 H26 A4,4 0 0 1 22,80 V64 A4,4 0 0 1 26,60 Z"
+        android:fillColor="#000000"
+        android:fillAlpha="0.18" />
+    <path android:pathData="M98,56 H100 A6,6 0 0 1 106,62 V82 A6,6 0 0 1 100,88 H98 A6,6 0 0 1 92,82 V62 A6,6 0 0 1 98,56 Z"
+        android:fillColor="#8A8A99" />
+    <path android:pathData="M94,60 H94 A4,4 0 0 1 98,64 V80 A4,4 0 0 1 94,84 H94 A4,4 0 0 1 90,80 V64 A4,4 0 0 1 94,60 Z"
+        android:fillColor="#000000"
+        android:fillAlpha="0.18" />
+</vector>

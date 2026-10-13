@@ -1,0 +1,28 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/app/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+# Firebase config is project-specific; keep it out of public repos
+app/google-services.json
+functions/node_modules/
+
+# Release builds and signing keys never go in the repository
+app/release/
+*.jks
+*.keystore
+*.aab
+*.apk
+
+# Firebase deploy cache
+.firebase/
+firebase-debug.log
+
+# Raw screenshots (the public ones are in docs/screenshots)
+store/Screenshot_*.png
+store/screenshots/humdinger-2-solved.png

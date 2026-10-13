@@ -1,0 +1,36 @@
+rules_version = '2';
+
+// Humdinger clip storage rules.
+// Published with: firebase deploy --only storage (see SETUP.md).
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Storage allowance guard: the server sets config/storage in the database every hour.
+    // "audioOnly" allows hums but not videos; "paused" allows no new recordings.
+    function allowsUpload(contentType) {
+      let cfg = /databases/(default)/documents/config/storage;
+      return !firestore.exists(cfg)
+        || firestore.get(cfg).data.get('mode', 'normal') == 'normal'
+        || (firestore.get(cfg).data.get('mode', 'normal') == 'audioOnly' && contentType.matches('audio/.*'));
+    }
+
+    // Each person can only upload into their own folder: clips/<their id>/<request id>/clip.m4a
+    match /clips/{uid}/{allPaths=**} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null
+        && request.auth.uid == uid
+        && request.resource.size < 50 * 1024 * 1024
+        && request.resource.contentType.matches('(audio|video)/.*')
+        && allowsUpload(request.resource.contentType);
+    }
+
+    // Thank-you recordings, in the sender's folder: thanks/<their id>/<request id>/clip.m4a
+    match /thanks/{uid}/{allPaths=**} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null
+        && request.auth.uid == uid
+        && request.resource.size < 50 * 1024 * 1024
+        && request.resource.contentType.matches('(audio|video)/.*')
+        && allowsUpload(request.resource.contentType);
+    }
+  }
+}

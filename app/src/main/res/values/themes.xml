@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Only used for the window before Compose draws; the real theme is in ui/theme/Theme.kt -->
+    <style name="Theme.Humdinger" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/cream</item>
+    </style>
+</resources>
